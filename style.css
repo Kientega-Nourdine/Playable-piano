@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+body { min-height: 100vh; background: #e3f2fd; display: flex; justify-content: center; align-items: center; padding: 0 10px; }
+.wrapper {/* width: 780px;*/ border-radius: 20px; padding: 35px 40px; background: #141414; }
+.wrapper header { color: #b2b2b2; display: flex; align-items: center; justify-content: space-between; }
+header h2 { font-size: 1.6rem; }
+header .column { display: flex; align-items: center; }
+header .column span { font-size: 1.19rem; margin-right: 15px; font-weight: 500; }
+.volume-slider input { accent-color: #fff; }
+.keys-checkbox input { width: 60px; height: 30px; cursor: pointer; appearance: none; border-radius: 30px; outline: none; background: #4b4b4b; position: relative; }
+.keys-checkbox input::before { content: ''; width: 20px; height: 20px; background: #8c8c8c; border-radius: inherit; left: 5px; top: 50%; transform: translateY(-50%); position: absolute; transition: all .3s ease; }
+.keys-checkbox input:checked:before { left: 35px; background: #fff; }
+.piano-keys { display: flex; margin-top: 40px; }
+.piano-keys .key { list-style: none; color: #a2a2a2; text-transform: uppercase; cursor: pointer; position: relative; user-select: none; }
+.piano-keys .white { width: 70px; height: 230px; border-radius: 8px; background: linear-gradient(#fff 96%, #eee 4%); border: 1px solid #000; }
+.piano-keys .black { width: 44px; height: 140px; margin: 0 -22px; z-index: 2; border-radius: 0 0 5px 5px; background: linear-gradient(#333 , #000); }
+.piano-keys .key span { position: absolute; bottom: 20px; width: 100%; text-align: center; font-size: 1.13rem; }
+.piano-keys .white.active { box-shadow: inset -5px 5px 20px rgba(0, 0, 0, .2); background: linear-gradient(to bottom, #fff 0%, #eee 100%); }
+.piano-keys .black.active { box-shadow: inset -5px 5px 10px rgba(255, 255, 255, .1); background: linear-gradient(to bottom, #000 0%, #434343); }
+.piano-keys .key.hide span { display: none; }
+@media screen and (max-width: 768px) {
+body { transform: rotate(90deg); height: 100vh; }
+}
+@media screen and (max-width: 768px) {
+.piano-keys .black { width: 44px; height: 120px; }
+.piano-keys .white { width: 60px; height: 200px; }
+}
+@media screen and (max-width: 396px) {
+    .wrapper {padding: 30px 15px; }
+}
+@media screen and (max-width: 321px) {
+.piano-keys li:nth-child(12) ~ li { display: none; } 
+.wrapper {padding: 6px; }
+.volume-slider input { width: 80px; accent-color: #fff; } 
+.keys-checkbox input:checked:before { left: 18px; background: #fff; }
+}
+
+
+
+
+
+
